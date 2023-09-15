@@ -1,4 +1,12 @@
 public class Shape{
-    int x;
-    int y;
+    private int x;
+    private int y;
+
+    Shape() {
+
+    }
+
+    public int calculateArea(){
+        return this.x*this.y;
+    }
 }
