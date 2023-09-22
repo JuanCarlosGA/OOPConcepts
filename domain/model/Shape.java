@@ -1,12 +1,15 @@
 package domain.model;
 
-public class Shape{
+public abstract class Shape{
     private int x = 0;
     private int y = 0;
 
     public Shape() {
 
     }
+    
+    public abstract int getArea();
+    public abstract int getPerimeter();
 
     public Shape(int x, int y) {
         this.x = x;
