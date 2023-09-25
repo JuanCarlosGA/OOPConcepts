@@ -3,6 +3,15 @@ package domain.model;
 public class Circle extends Shape {
     private int radius;
 
+    public Circle(int x, int y, int radius) {
+        super(x, y);
+        setRadius(radius);
+    }
+
+    public Circle(int radius) {
+        this(0, 0, radius);
+    }
+
     @Override
     public int getArea() {
         return (int) (Math.PI * Math.pow(radius, 2));

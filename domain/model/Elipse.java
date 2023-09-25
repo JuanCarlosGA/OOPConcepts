@@ -3,6 +3,15 @@ package domain.model;
 public class Elipse extends Circle {
     private int secondRadius;
 
+    public Elipse(int x, int y, int radius, int secondRadius) {
+        super(x, y, radius);
+        setSecondRadius(secondRadius);
+    }
+
+    public Elipse(int radius, int secondRadius) {
+        this(0, 0, radius, secondRadius);
+    }
+
     @Override
     public int getArea() {
         return (int) (Math.PI * getRadius() * getSeccondRadius());

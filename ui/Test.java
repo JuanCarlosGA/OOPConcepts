@@ -3,16 +3,18 @@ import domain.model.*;
 
 public class Test {
     public static void main(String[] args) {
-        var s1 = new Square();
+       var shape = new Shape[] {
+                new Circle(20),
+                new Square(15),
+                new Rect(10, 20),
+                new Elipse(5, 10),
+                new Square(10)
+            };
 
-        s1.setWidth(5);
-        
-        System.out.println(s1.getWidth());
-        System.out.println(s1.getHeight());
+         var sumArea = 0;
 
-        s1.setHeight(10);
-
-        System.out.println(s1.getWidth());
-        System.out.println(s1.getHeight());
+         for (Shape shape2 : shape) {
+            sumArea = sumArea + shape2.getArea();
+         }
     }
 }
